@@ -5,11 +5,61 @@
   margin: 0;
   box-sizing: border-box;
 }
+/*----------------GENERAL STYLES applied to multiple element------------*/
+img[src$="illustration-article.svg"] {
+  margin: 1em;
+  border-radius: 20px;
+}
+.card-text-wrapper,
+.attribution-wrapper {
+  margin-left: 1em;
+}
+/*with the two css rule above everything INSIDE CARD has as the same margin left */
 
 body {
+  height: 100vh;
   font-family: "Figtree", sans-serif;
 }
 
+.container {
+  border: 8px solid red;
+
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 70px, transparent 70px)
+      center center / 100px 100% repeat-x,
+    #f4d04e;
+
+  height: 100%;
+
+  /*places card and h1 text in the center */
+  display: grid;
+  place-content: center;
+}
+
 h1 {
-  color: rgb(193, 193, 36);
+  margin-bottom: 0.31em;
+  text-align: center; /*properly center text with card below */
+}
+
+/*----------------------CARD STYLES---------------------- */
+
+.card {
+  width: 384px;
+  height: 522px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 10px 8px 5px black;
+  border-radius: 20px;
+}
+
+/*------------------attribution styles(should be all the way at the bottom)-------------------- */
+.attribution {
+  /*  text-align: center; */ /* commented out keep the ying yang and text on the left edge for now */
+  display: flex;
+  align-items: center;
+  gap: 0.55em;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
 }
