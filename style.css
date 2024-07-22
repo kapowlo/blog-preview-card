@@ -41,8 +41,6 @@ body {
 }
 /*-------------------------------------CONTAINER STYLES----------------------------------------*/
 .container {
-  border: 8px solid red;
-
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 70px, transparent 70px)
       center center / 100px 100% repeat-x,
     #f4d04e;
@@ -55,7 +53,6 @@ body {
 }
 
 h1 {
-  margin-bottom: 0.31em;
   text-align: center; /*properly center text with card below */
 }
 
@@ -64,6 +61,7 @@ h1 {
 .card {
   width: 384px;
   height: 522px;
+  margin-top: 0.55rem;
   background-color: rgb(255, 255, 255);
 
   box-shadow: 10px 8px 5px black;
@@ -92,4 +90,55 @@ h1 {
 .attribution a {
   text-decoration: none;
   color: black;
+}
+
+/*-----------------------------media queries------------------------ */
+/*at around 450px  */
+@media screen and (max-width: 450px) {
+  h1 {
+    font-size: 1.45rem;
+  }
+  .big {
+    font-size: 1.15rem;
+  }
+  .card {
+    width: 320px;
+    height: 479px;
+  }
+  img[src$="illustration-article.svg"] {
+    max-width: 279px;
+    margin: 0 auto;
+    border-radius: 35px;
+  }
+  .card-text-wrapper {
+    margin-top: 0.25rem;
+  }
+
+  .card-text-wrapper,
+  .attribution-wrapper {
+    margin-left: 1rem;
+  }
+
+  .card-text-wrapper p:last-child {
+    line-height: 150%;
+  }
+}
+
+@media screen and (max-width: 354px) {
+  .big {
+    font-size: 0.95rem;
+  }
+  .card {
+    width: 260px;
+    height: 455px;
+  }
+  .card-text-wrapper {
+    margin-top: -1rem;
+  }
+
+  img[src$="illustration-article.svg"] {
+    max-width: 219px;
+    margin: -1.025rem auto 0 auto;
+    border-radius: 62px;
+  }
 }
