@@ -68,3 +68,8 @@ Outline areas and concepts that I want to continue focusing on in future project
 
 - Website - [Add your name here](https://www.your-site.com)
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+
+## Tips
+
+This link was useful for making the vertical stripes
+https://stripesgenerator.com/
