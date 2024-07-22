@@ -7,20 +7,39 @@
 }
 /*----------------GENERAL STYLES applied to multiple element------------*/
 img[src$="illustration-article.svg"] {
-  margin: 1em;
+  margin: 1rem auto 0.85rem auto; /*to have the same spacing around the image i should have 1.5rem but it looks weird*/
   border-radius: 20px;
+
+  display: block;
 }
 .card-text-wrapper,
 .attribution-wrapper {
-  margin-left: 1em;
+  margin-left: 1.5rem;
 }
 /*with the two css rule above everything INSIDE CARD has as the same margin left */
+.bold {
+  font-weight: bolder;
+}
+.yellow-bg {
+  background-color: #f4d04e;
+  padding: 4px 12px;
+  border-radius: 6px;
+  display: inline;
+}
+.big {
+  font-size: 1.25rem;
+}
+.hover:hover,
+.hover:focus {
+  cursor: pointer;
+  color: #f4d04e;
+}
 
 body {
   height: 100vh;
   font-family: "Figtree", sans-serif;
 }
-
+/*-------------------------------------CONTAINER STYLES----------------------------------------*/
 .container {
   border: 8px solid red;
 
@@ -46,8 +65,20 @@ h1 {
   width: 384px;
   height: 522px;
   background-color: rgb(255, 255, 255);
+
   box-shadow: 10px 8px 5px black;
   border-radius: 20px;
+
+  font-size: 0.8rem; /*text content inside card -except big text- should compute to the equivalent of 16px */
+  opacity: 0.929;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card-text-wrapper p,
+.attribution-wrapper {
+  margin-top: 0.85rem;
 }
 
 /*------------------attribution styles(should be all the way at the bottom)-------------------- */
@@ -61,5 +92,4 @@ h1 {
 .attribution a {
   text-decoration: none;
   color: black;
-  font-size: 16px;
 }
