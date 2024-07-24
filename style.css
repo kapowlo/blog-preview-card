@@ -6,17 +6,7 @@
   box-sizing: border-box;
 }
 /*----------------GENERAL STYLES applied to multiple element------------*/
-img[src$="illustration-article.svg"] {
-  margin: 1rem auto 0.85rem auto; /*to have the same spacing around the image i should have 1.5rem but it looks weird*/
-  border-radius: 20px;
 
-  display: block;
-}
-.card-text-wrapper,
-.attribution-wrapper {
-  margin-left: 1.5rem;
-}
-/*with the two css rule above everything INSIDE CARD has as the same margin left */
 .bold {
   font-weight: bolder;
 }
@@ -44,7 +34,7 @@ body {
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 70px, transparent 70px)
       center center / 100px 100% repeat-x,
     #f4d04e;
-
+  padding: 0 1rem; /*needed some padding at smaller screen size the card would touch both edges */
   height: 100%;
 
   /*places card and h1 text in the center */
@@ -59,24 +49,48 @@ h1 {
 /*----------------------CARD STYLES---------------------- */
 
 .card {
-  width: 384px;
-  height: 522px;
   margin-top: 0.55rem;
+  padding: 1rem;
   background-color: rgb(255, 255, 255);
 
   box-shadow: 10px 8px 5px black;
   border-radius: 20px;
 
-  font-size: 0.8rem; /*text content inside card -except big text- should compute to the equivalent of 16px */
+  font-size: 1rem; /*made it a bit bigger */
   opacity: 0.929;
 
   display: flex;
   flex-direction: column;
 }
 
-.card-text-wrapper p,
+.card-img-wrapper {
+  width: 100%;
+  border: 2px solid red;
+}
+
+img[src$="illustration-article.svg"] {
+  /*  margin: 0 auto 0 auto; */ /*centering the svg image causes is not needed */
+  width: 100%;
+  border-radius: 20px;
+  /* margin: 0 0 0 2em; */
+  display: block;
+}
+.card-text-wrapper,
 .attribution-wrapper {
-  margin-top: 0.85rem;
+  margin-top: 1rem;
+}
+.card-text-wrapper p + p {
+  margin-top: 1rem;
+}
+
+.card-text-wrapper .extra-margin {
+  /*only targets html css  foundation text*/
+  margin: 1.25rem 0 1.25rem 0;
+}
+
+.card-text-wrapper p:last-child {
+  border: 2px solid red;
+  width: 75%;
 }
 
 /*------------------ATTRIBUTION STYLES-------------------- */
@@ -89,55 +103,4 @@ h1 {
 .attribution a {
   text-decoration: none;
   color: black;
-}
-
-/*-----------------------------media queries------------------------ */
-/*makes sure there is enough space around the card at smaller screen size and re-adjusts the card content to fit inside of card*/
-@media screen and (max-width: 450px) {
-  h1 {
-    font-size: 1.45rem;
-  }
-  .big {
-    font-size: 1.15rem;
-  }
-  .card {
-    width: 320px;
-    height: 479px;
-  }
-  img[src$="illustration-article.svg"] {
-    max-width: 279px;
-    margin: 0 auto;
-    border-radius: 35px;
-  }
-  .card-text-wrapper {
-    margin-top: 0.25rem;
-  }
-
-  .card-text-wrapper,
-  .attribution-wrapper {
-    margin-left: 1rem;
-  }
-
-  .card-text-wrapper p:last-child {
-    line-height: 150%;
-  }
-}
-
-@media screen and (max-width: 354px) {
-  .big {
-    font-size: 0.95rem;
-  }
-  .card {
-    width: 260px;
-    height: 455px;
-  }
-  .card-text-wrapper {
-    margin-top: -1rem;
-  }
-
-  img[src$="illustration-article.svg"] {
-    max-width: 219px;
-    margin: -1.025rem auto 0 auto;
-    border-radius: 62px;
-  }
 }
