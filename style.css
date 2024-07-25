@@ -26,7 +26,7 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh; /*this should solve the overflow issue */
   font-family: "Figtree", sans-serif;
 }
 /*-------------------------------------CONTAINER STYLES----------------------------------------*/
@@ -34,12 +34,17 @@ body {
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 70px, transparent 70px)
       center center / 100px 100% repeat-x,
     #f4d04e;
-  padding: 0 1rem; /*needed some padding at smaller screen size the card would touch both edges */
+  padding: 1rem; /*needed some padding at smaller screen size the card would touch both edges */
+  border: 8px solid red;
   height: 100%;
 
   /*places card and h1 text in the center */
   display: grid;
   place-content: center;
+  /*  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
 }
 
 h1 {
