@@ -64,5 +64,5 @@ https://stripesgenerator.com/
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/flexbox-and-grid-blog-preview-card-qKoffGNazE]
+- Live Site URL: [https://kapowlo.github.io/blog-preview-card/]
