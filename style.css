@@ -52,7 +52,7 @@ h1 {
 .card {
   margin-top: 0.55rem;
   padding: 1rem;
-  max-width: 450px; /*stops cards from getting too big on big screens
+  max-width: 400px; /*stops cards from getting too big on big screens
   (note i had to remove min-height on body or container wouldn't fill up the webpage) */
 
   background-color: rgb(255, 255, 255);
